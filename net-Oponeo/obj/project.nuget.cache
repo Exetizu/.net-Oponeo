@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xx0pw9vdlMJTxIyjSOUYeBKJPUufuqcblcOZWgpdl704iJ6i5N7Q6zfijaINYtyEmJv5haRrlxtUw7affDb6sw==",
+  "success": true,
+  "projectFilePath": "D:\\github\\.net-Oponeo\\net-Oponeo\\net-Oponeo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Piotr\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

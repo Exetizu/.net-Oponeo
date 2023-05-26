@@ -1,0 +1,24 @@
+﻿@model IEnumerable<net_Oponeo.Models.Rim>
+
+@{
+    ViewData["Title"] = "Felgi";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+    <div class="container">
+        <div class="main-grid">
+            @foreach (var rim in Model)
+            {
+            <div class="item-card">
+                <div class="item-card-img"><img src="~/img/rim.png" alt="felga" class="item-card-img-img" style="width: 150px;"></div>
+                <div class="item-card-name">@rim.Name </div>
+                <div class="item-card-block">
+                    <div class="item-card-desc"><strong>Producent: </strong> @rim.Manufacturer</div>
+                    <div class="item-card-desc"><strong>Materiał: </strong> @rim.Material</div>
+                    <div class="item-card-desc"><strong>Color: </strong> @rim.Color</div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>

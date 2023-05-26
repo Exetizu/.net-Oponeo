@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using net_Oponeo.Services;
+using net_Oponeo.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +27,11 @@ namespace net_Oponeo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<IWarehouseService, WarehouseService>();
+            services.AddDbContext<DbTestContext>(builder =>
+            {
+                builder.UseSqlServer(@"Data Source=localhost; Database=DbTest; Integrated Security=True ");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

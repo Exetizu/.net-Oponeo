@@ -1,0 +1,29 @@
+﻿@model net_Oponeo.Models.Rim
+@{
+    ViewData["Title"] = "Dodaj felgę";
+}
+
+<h1>Dodaj felgę</h1>
+
+@using (Html.BeginForm("AddRim", "Rim", FormMethod.Post))
+{
+    <span>Nazwa:</span>
+    <br />
+    @Html.TextBoxFor(x => x.Name)
+    <br />
+    <span>Producent:</span>
+    <br />
+    @Html.TextBoxFor(x => x.Manufacturer)
+    <br />
+    <span>Kolor:</span>
+    <br />
+    @Html.TextBoxFor(x => x.Color)
+    <br />
+    <span>Materiał:</span>
+    <br />
+    @Html.TextBoxFor(x => x.Material)
+    <br />
+    <br />
+    <button type="submit">Dodaj</button>
+    @Html.ValidationSummary()
+}

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<net_Oponeo.Models.Tire>
+@{
+    ViewData["Title"] = "Opony";
+}
+
+<h1>@ViewData["Title"]</h1>
+    <div class="container">
+        <div class="main-grid">
+            @foreach (var tire in Model)
+            {
+                <div class="item-card">
+                    <div class="item-card-img"><img src="~/img/tire.png" alt="opona" class="item-card-img-img" style="width: 150px;"></div>
+                    <div class="item-card-name">@tire.Name </div>
+                    <div class="item-card-block">
+                        <div class="item-card-desc"><strong>Producent: </strong> @tire.Manufacturer</div>
+                        <div class="item-card-desc"><strong>Sezon: </strong> @tire.Season</div>
+                        <div class="item-card-desc"><strong>Typ: </strong> @tire.Type</div>
+                        <div class="item-card-desc"><strong>Rozmiar: </strong> @tire.Size</div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>

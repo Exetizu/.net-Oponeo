@@ -1,0 +1,33 @@
+﻿@model net_Oponeo.Models.Tire
+@{
+    ViewData["Title"] = "Dodaj oponę";
+}
+
+<h1>Dodaj oponę</h1>
+
+@using (Html.BeginForm("AddTire", "Tire", FormMethod.Post))
+{
+    <span>Nazwa:</span>
+    <br />
+    @Html.TextBoxFor(x => x.Name)
+    <br />
+    <span>Producent:</span>
+    <br />
+    @Html.TextBoxFor(x => x.Manufacturer)
+    <br />
+    <span>Sezon:</span>
+    <br />
+    @Html.TextBoxFor(x => x.Season)
+    <br />
+    <span>Rozmiar:</span>
+    <br />
+    @Html.TextBoxFor(x => x.Size)
+    <br />
+    <span>Typ:</span>
+    <br />
+    @Html.TextBoxFor(x => x.Type)
+    <br />
+    <br />
+    <button type="submit">Dodaj</button>
+    @Html.ValidationSummary()
+}
